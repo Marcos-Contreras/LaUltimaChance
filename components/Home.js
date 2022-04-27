@@ -9,7 +9,7 @@ function Home ({ navigation }) {
       <NativeBaseProvider>
         <Box flex={1} bg="#fff" alignItems="center" justifyContent="center">
           <Text>Pantalla de inicio</Text>
-          <Button onPress={() => navigation.navigate('Logiin')}>Ir a Login</Button>
+          <Button onPress={() => navigation.navigate('Login')}>Ir a Login</Button>
         </Box>
       </NativeBaseProvider>
     );
