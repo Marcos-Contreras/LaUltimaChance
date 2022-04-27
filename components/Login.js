@@ -9,7 +9,7 @@ function Login ({ navigation }) {
       <NativeBaseProvider>
         <Box flex={1} bg="#fff" alignItems="center" justifyContent="center">
           <Text>Login</Text>
-          <Button onPress={() => navigation.navigate('Card')}>Go to the card</Button>
+          <Button onPress={() => navigation.navigate('Card')}>Ir a Card</Button>
         </Box>
       </NativeBaseProvider>
     );
