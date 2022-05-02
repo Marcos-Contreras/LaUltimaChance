@@ -10,6 +10,10 @@ function Home ({ navigation }) {
         <Box flex={1} bg="#fff" alignItems="center" justifyContent="center">
           <Text>PANTALLA DE INICIO PRUEBA DE GIT HUB AHORA SI ES EL BUENO</Text>
           <Button onPress={() => navigation.navigate('Login')}>Ir a Login</Button>
+          <Button onPress={() => navigation.navigate('Offers')}>Ir a Offers</Button>
+          <Button onPress={() => navigation.navigate('Novelty')}>Ir a Novelty</Button>
+          <Button onPress={() => navigation.navigate('Packages')}>Ir a Packages</Button>
+
         </Box>
       </NativeBaseProvider>
     );
