@@ -1,19 +1,92 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-//IMPORTANDO NATIVEBASE
-import { NativeBaseProvider, Text, Button, Box } from 'native-base';
+import { StyleSheet, Text, TouchableOpacity, View, Box} from "react-native";
 
 function Home ({ navigation }) {
-    return (
-      <NativeBaseProvider>
-        <Box flex={1} bg="#fff" alignItems="center" justifyContent="center">
-          <Text>PRUEBA GAMAA</Text>
-          <Button onPress={() => navigation.navigate('Login')}>Ir a Login</Button>
-        </Box>
-      </NativeBaseProvider>
-    );
-  }
+  return (
 
+    <View style={styles.container}>
+
+      <TouchableOpacity style={styles.button1}
+       activeOpacity={0.2}
+       onPress={() => navigation.navigate('Categories')}>
+        <Text  style ={{  color: '#fff', fontSize: 30, fontWeight: 'bold'}}> PRODUCTOS </Text>
+      </TouchableOpacity> 
+
+       <TouchableOpacity style={styles.button2}
+         activeOpacity={0.2}
+      onPress={() => navigation.navigate('')}>
+        <Text  style ={{  color: '#fff', fontSize: 30, fontWeight: 'bold'}}> ¡OFERTAS! </Text>
+      </TouchableOpacity> 
+
+      <TouchableOpacity style={styles.button3}
+        activeOpacity={0.2}
+      onPress={() => navigation.navigate('')}>
+        <Text  style ={{  color: '#fff', fontSize: 30, fontWeight: 'bold'}}> NOVEDADES </Text>
+      </TouchableOpacity> 
+
+      <TouchableOpacity style={styles.button4}
+        activeOpacity={0.2}
+      onPress={() => navigation.navigate('')}>
+        <Text  style ={{  color: '#fff', fontSize: 30, fontWeight: 'bold'}}> PAQUETES </Text>
+      </TouchableOpacity> 
+
+    </View>
+    
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    paddingHorizontal: 10
+  },
+
+  button1: {
+    alignItems: "center",
+    backgroundColor: "#3276e3",
+    marginTop: 0,
+  shadowColor: '#3276e3',
+            shadowOffset: { width: 4, height: 3 },
+            shadowOpacity: 0.2,
+    padding: 30,
+    borderRadius: 10
+  },
+
+   button2: {
+    alignItems: "center",
+    backgroundColor: "#a81919",
+    marginTop: 30,
+    shadowColor: '#BD0909',
+            shadowOffset: { width: 4, height: 3},
+            shadowOpacity: 0.2,
+    padding: 30,
+   borderRadius: 10
+  },
+
+   button3: {
+    alignItems: "center",
+    backgroundColor: "#44DA51",
+    shadowColor: '#64B523',
+            shadowOffset: { width: 4, height: 3},
+            shadowOpacity: 0.2,
+    marginTop:30,
+    borderRadius: 10,
+    padding: 30
+  },
+
+   button4: {
+    alignItems: "center",
+    backgroundColor: "#9F764D",
+      shadowColor: '#73592F',
+            shadowOffset: { width: 4, height: 3},
+            shadowOpacity: 0.2,
+    borderRadius: 10,
+    marginTop: 30,
+    padding: 30
+  },
+});
 
 export default Home;
