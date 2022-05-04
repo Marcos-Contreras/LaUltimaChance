@@ -2,64 +2,36 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 //IMPORTANDO NATIVEBASE
-import { Button, Box, Heading, AspectRatio, Image, Text, Center, HStack, Stack, NativeBaseProvider } from 'native-base';
+import { Button, Box, Heading, Text, Center,  NativeBaseProvider, Divider, Stack } from 'native-base';
+import { TouchableOpacity } from "react-native";
 
 function Card ({ navigation }) {
     return (
-      <NativeBaseProvider>
-        <Box rounded="lg" overflow="hidden" borderColor="coolGray.200" borderWidth="1" _dark={{
-      borderColor: "coolGray.600",
-      backgroundColor: "gray.700"
-    }} _web={{
-      shadow: 2,
-      borderWidth: 0
-    }} _light={{
-      backgroundColor: "gray.50"
-    }}>
-        <Box>
-          <AspectRatio w="100%" ratio={16 / 9}>
-            <Image source={{
-            uri: "https://www.holidify.com/images/cmsuploads/compressed/Bangalore_citycover_20190613234056.jpg"
-          }} alt="image" />
-          </AspectRatio>
-          <Center bg="violet.500" _dark={{
-          bg: "violet.400"
-        }} _text={{
-          color: "warmGray.50",
-          fontWeight: "700",
-          fontSize: "xs"
-        }} position="absolute" bottom="0" px="3" py="1.5">
-            PHOTOS
-          </Center>
-        </Box>
-        <Stack p="4" space={3}>
-          <Stack space={2}>
-            <Heading size="md" ml="-1">
-              The Garden City
-            </Heading>
-            <Text fontSize="xs" _light={{
-            color: "violet.500"
-          }} _dark={{
-            color: "violet.400"
-          }} fontWeight="500" ml="-0.5" mt="-1">
-              The Silicon Valley of India.
-            </Text>
-          </Stack>
-          <Text fontWeight="400">
-            Bengaluru (also called Bangalore) is the center of India's high-tech
-            industry. The city is also known for its parks and nightlife.
-          </Text>
-          <HStack alignItems="center" space={4} justifyContent="space-between">
-            <HStack alignItems="center">
-              <Text color="coolGray.600" _dark={{
-              color: "warmGray.200"
-            }} fontWeight="400">
-                6 mins ago
-              </Text>
-            </HStack>
-            <Button onPress={() => navigation.navigate('Home')}>Ir a Home</Button>
-          </HStack>
-        </Stack>
+        <NativeBaseProvider >
+        <Box flex={1} bg="#fff">
+          <Heading paddingTop={"10"} paddingLeft={"10"}>Churrumais</Heading>
+          <Text paddingLeft={"10"}>Precio: 20$</Text>
+          <Divider width={"90%"} my="4" thickness="5" mx="5" />
+          <Heading paddingLeft={"10"}>Coca-Cola</Heading>
+          <Text paddingLeft={"10"}>Precio: 25$</Text>
+          <Divider width={"90%"} my="4" thickness="5" mx="5"/>
+          <Heading paddingLeft={"10"}>Danonino</Heading>
+          <Text paddingLeft={"10"}>Precio: 33$</Text>
+          <Divider width={"90%"} my="4" thickness="5" mx="5" />
+          <Center>
+          
+          
+          <TouchableOpacity activeOpacity={0.2} onPress={() => navigation.navigate('Checkout')}>
+              <Text> Comprar ahora </Text>
+          </TouchableOpacity>
+
+          
+          <Button width={180} backgroundColor={"#D60004"}  >
+            Eliminar</Button>
+
+          
+        <Heading paddingTop={"8"}>Total: 78$</Heading>
+        </Center>
       </Box>
       </NativeBaseProvider>
     );
