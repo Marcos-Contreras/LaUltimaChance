@@ -5,7 +5,7 @@ const Toolbar = ({navigation}) => {
     return (
         <NativeBaseProvider>
             <Box w="90%" alignItems="center">
-            <Menu w="190" trigger={triggerProps => {
+            <Menu w="190" defaultIsOpen={false} trigger={triggerProps => {
             return  <Pressable accessibilityLabel="More options menu" {...triggerProps}>
                         <HamburgerIcon style={{ color: 'white', margin: 15 }}/>
                     </Pressable>;
