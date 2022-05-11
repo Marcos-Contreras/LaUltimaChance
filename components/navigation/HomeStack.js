@@ -92,6 +92,7 @@ export default function HomeStack({navigation}){
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
+            <HomeScreens.Screen name="Toolbar" component={Toolbar}/>
         </HomeScreens.Navigator>
         </NativeBaseProvider>
     )

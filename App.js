@@ -7,6 +7,7 @@ import Welcome from './components/Welcome';
 import SignUp from './components/SignUp';
 import ForgotPassword from './components/ForgotPassword';
 import RootClientTabs from './components/navigation/ClientTabs';
+import Toolbar from './components/elements/Toolbar';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +24,7 @@ export default function App() {
         <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
         {/* PANTALLAS DE BOTTOM NAVIGATION */}
         <Stack.Screen name="RootClientTabs" component={RootClientTabs} options = {{ headerShown: false }}/>
+        <Stack.Screen name="Toolbar" component={Toolbar}/>
       </Stack.Navigator>
       
     </NavigationContainer>
