@@ -12,44 +12,55 @@ import PayPalAccount from '../PayPalAccount';
 const AccountScreens = createStackNavigator();
 export default function AccountStack(){
     return(
-        <AccountScreens.Navigator>
+        <AccountScreens.Navigator screenOptions={{
+                headerTintColor: 'white',
+                headerStyle: { backgroundColor: '#002171' },
+              }}>
             <AccountScreens.Screen name = "Account" component = {Account} options = {{ 
-                    headerShown: false,
+                    headerShown: true,
+                    title: "Cuenta",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
             <AccountScreens.Screen name = "PayPalLogin" component = {PayPalLogin} options = {{ 
-                    headerShown: false,
+                    headerShown: true,
+                    title: "PayPal",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
             <AccountScreens.Screen name = "Settings" component = {Settings} options = {{ 
-                    headerShown: false,
+                    headerShown: true,
+                    title: "Configuración",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
             <AccountScreens.Screen name = "Contact" component = {Contact} options = {{ 
-                    headerShown: false,
+                    headerShown: true,
+                    title: "Contacto",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
             <AccountScreens.Screen name = "Rate" component = {Rate} options = {{ 
-                    headerShown: false,
+                    headerShown: true,
+                    title: "Evaluar App",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
             <AccountScreens.Screen name = "Locate" component = {Locate} options = {{ 
-                    headerShown: false,
+                    headerShown: true,
+                    title: "Ubícanos",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
             <AccountScreens.Screen name = "PayPalAccount" component = {PayPalAccount} options = {{ 
-                    headerShown: false,
+                    headerShown: true,
+                    title: "PayPal",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
             <AccountScreens.Screen name = "Terms" component = {Terms} options = {{ 
-                    headerShown: false,
+                    headerShown: true,
+                    title: "Términos",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />

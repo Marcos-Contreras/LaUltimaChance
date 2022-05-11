@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 //IMPORTANDO NATIVEBASE
 import { NativeBaseProvider, Text, Button, Box, Image, Heading } from 'native-base';
+import GlobalStyle from '../resources/GlobalStyle';
 
 function Thanks ({ navigation }) {
     return (
@@ -11,9 +12,8 @@ function Thanks ({ navigation }) {
           
           
           <Image mt="100" source={
-      require( "../assets/luc.png")
-    }  width={300}  
-       height={330}
+      require( "../assets/Logo.png")
+    }  style={GlobalStyle.logo}
        
     />
         

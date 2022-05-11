@@ -1,7 +1,6 @@
 import React from 'react';
-import {View, SafeAreaView, Image, Text, StyleSheet, Button, ScrollView} from 'react-native';
-//import Icon from 'react-native-vector-icons/MaterialIcons';
-//import img from '../assets/favicon.png';
+import {View, SafeAreaView, Image, Text, StyleSheet, Button, ScrollView, TouchableOpacity} from 'react-native';
+import GlobalStyle from '../resources/GlobalStyle';
 
 const DNovelty = ({navigation, route}) => {
   const productos = route.params;
@@ -74,7 +73,9 @@ const DNovelty = ({navigation, route}) => {
             }}>
 
             <View>
-            <Button title="Añadir al carrito" onPress={() => navigation.navigate('Home')}/>
+            <TouchableOpacity onPress={() => navigation.navigate('Cart')} style={GlobalStyle.largeButton}>
+                <Text style={GlobalStyle.largeButtonText}>Añadir al carrito</Text>
+              </TouchableOpacity>
             </View>
           </View>
         </View>

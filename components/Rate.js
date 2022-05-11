@@ -58,7 +58,7 @@ import { NativeBaseProvider, VStack, Text, Box, Stack, TextArea } from 'native-b
                     <TouchableOpacity
                         activeOpacity={0.7}
                         style={styles.buttonStyle}
-                        onPress={() => alert(defaultRating)}>
+                        onPress={() => alert('Su calificación fue: ' + defaultRating + '. Gracias por su opinión')}>
                         <Text
                         style={styles.textButtonStyle}>
                             Enviar Calificación

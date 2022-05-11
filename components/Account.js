@@ -2,22 +2,25 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 //IMPORTANDO NATIVEBASE
-import { NativeBaseProvider, Text, Button, Box } from 'native-base';
+import { NativeBaseProvider, Text, Center, Box } from 'native-base';
 import { TouchableOpacity, StyleSheet } from 'react-native';
-
+import GlobalStyle from '../resources/GlobalStyle';
 
 
 function Account ({ navigation }) {
     return (
       <NativeBaseProvider>
-        <Box flex={1} bg="#fff" alignItems="center" >
-        <Text>{"\n"}</Text>
+        <Center w="100%" >
+        <Box safeArea p="2" py="8" w="90%" maxW="390" >
+        <Text style={GlobalStyle.largeLabelText}>
+              CUENTA
+            </Text>
         
           <TouchableOpacity onPress={() => navigation.navigate('PayPalLogin')} style = {styles.button}>
             <Text style = {{ color: '#fff', fontSize: 22, fontWeight:'bold'}}  >PayPal</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => navigation.navigate('')} style = {styles.button}>
+          <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword')} style = {styles.button}>
             <Text style = {{ color: '#fff', fontSize: 22, fontWeight:'bold'}}  >Recuperar o cambiar contraseña</Text>
           </TouchableOpacity>
 
@@ -31,6 +34,7 @@ function Account ({ navigation }) {
           
 
         </Box>
+        </Center>
       </NativeBaseProvider>
     );
   }
@@ -41,8 +45,8 @@ function Account ({ navigation }) {
       paddingHorizontal: 16,
       borderRadius: 20,
       paddingVertical: 20,
-      width: "90%",
-      marginVertical: 5,
+      width: "100%",
+      marginVertical: 10,
       alignItems: "baseline"
     }
     

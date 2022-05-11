@@ -8,7 +8,7 @@ import GlobalStyle from '../resources/GlobalStyle';
 function Welcome ({ navigation }) {
     return (
       <NativeBaseProvider>
-            
+        
         <Box flex={1} bg="#fff" alignItems="center" justifyContent="center">
             <Image source={
                 require('../assets/Logo.png')
@@ -16,7 +16,7 @@ function Welcome ({ navigation }) {
             <TouchableOpacity onPress={() => navigation.navigate('Login')} style={GlobalStyle.largeButton}>
                 <Text style={GlobalStyle.largeButtonText}>Iniciar sesión</Text>
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate('Register')} style={GlobalStyle.largeButton}>
+            <TouchableOpacity onPress={() => navigation.navigate('SignUp')} style={GlobalStyle.largeButton}>
                 <Text style={GlobalStyle.largeButtonText}>Registrarse</Text>
             </TouchableOpacity>
         </Box>

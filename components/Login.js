@@ -25,13 +25,13 @@ const Login = ({navigation}) => {
                   <Input size="xl"/>
                 </FormControl>
               <FormControl>
-                <FormControl.Label>PASSWORD</FormControl.Label>
+                <FormControl.Label>CONTRASEÑA</FormControl.Label>
                   <Input type="password" size="xl"/>
                     <Link _text={{
                       fontSize: "xs",
                       fontWeight: "500",
                       color: "#007AC1"
-                    }} alignSelf="flex-end" mt="1">
+                    }} alignSelf="flex-end" mt="1" onPress={() => navigation.navigate('ForgotPassword')}>
                         ¿Olvidaste tu contraseña?
                     </Link>
               </FormControl>
@@ -48,7 +48,7 @@ const Login = ({navigation}) => {
                   color: "#007AC1",
                   fontWeight: "medium",
                   fontSize: "sm"
-                }} href="#">
+                }} onPress={() => navigation.navigate('SignUp')}>
                     Registrarme
                 </Link>
               </HStack>
