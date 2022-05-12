@@ -10,9 +10,9 @@ const Toolbar = ({navigation}) => {
                         <HamburgerIcon style={{ color: 'white', margin: 15 }}/>
                     </Pressable>;
             }}>
-                <Menu.Item onPress={() => navigation.navigate('AccountStack')}>Mi cuenta</Menu.Item>
-                <Menu.Item onPress={() => navigation.navigate('Settings')}>Configuración</Menu.Item>
-                <Menu.Item onPress={() => navigation.navigate('Login')}>Cerrar sesión</Menu.Item>
+                <Menu.Item>Mi cuenta</Menu.Item>
+                <Menu.Item>Configuración</Menu.Item>
+                <Menu.Item>Cerrar sesión</Menu.Item>
             </Menu>
             </Box>
     </NativeBaseProvider>
