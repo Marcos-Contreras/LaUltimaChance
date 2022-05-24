@@ -3,6 +3,11 @@ import {View, SafeAreaView, Image, Text, StyleSheet, Button, ScrollView, Touchab
 import GlobalStyle from '../resources/GlobalStyle';
 
 const DPackages = ({navigation, route}) => {
+
+  const addToCart = () => {
+
+  }
+
   const productos = route.params;
 
   return (
@@ -72,7 +77,7 @@ const DPackages = ({navigation, route}) => {
             }}>
 
             <View>
-            <TouchableOpacity onPress={() => navigation.navigate('Cart')} style={GlobalStyle.largeButton}>
+            <TouchableOpacity onPress={() => addToCart()} style={GlobalStyle.largeButton}>
                 <Text style={GlobalStyle.largeButtonText}>Añadir al carrito</Text>
               </TouchableOpacity>
             </View>

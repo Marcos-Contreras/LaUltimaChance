@@ -2,11 +2,18 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StyleSheet, Text, TouchableOpacity, View, Box} from "react-native";
+import GlobalStyle from '../resources/GlobalStyle';
+import { auth } from '../database/firebase';
 
 function Home ({ navigation }) {
+
   return (
 
     <View style={styles.container}>
+
+            <Text style={GlobalStyle.largeLabelText}>
+                BIENVENIDO, {auth.currentUser?.email}
+            </Text>
 
       <TouchableOpacity style={styles.button1}
        activeOpacity={0.2}

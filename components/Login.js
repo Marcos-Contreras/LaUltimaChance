@@ -1,9 +1,35 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import { Stack, Image, Box, Text, VStack, FormControl, Input, Link, Button, HStack, Center, NativeBaseProvider } from "native-base";
 import GlobalStyle from '../resources/GlobalStyle';
 import { TouchableOpacity } from 'react-native';
+import { auth } from "../database/firebase";
+// import { useNavigation } from "@react-navigation/core";
 
 const Login = ({navigation}) => {
+
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+//MANDA AUTOMATICAMENTE AL USUARIO AL HOME DE LA APP CUANDO SE HA INICIADO SESIÓN
+  useEffect(() => {
+    const unsuscribe = auth.onAuthStateChanged(user =>{
+      if(user){
+        navigation.replace("RootClientTabs")
+      }
+    })
+    return unsuscribe
+  }, [])
+  
+
+  const handleLogin = () => {
+    auth.signInWithEmailAndPassword(email, password)
+    .then(userCredentials => {
+      const user = userCredentials.user;
+      console.log('Logged in with: ', user.email);
+    })
+    .catch(error => alert(error.message))
+  } 
+
   return (
   
       <NativeBaseProvider>
@@ -22,11 +48,11 @@ const Login = ({navigation}) => {
             <VStack space={3} mt="5">
               <FormControl>
                 <FormControl.Label>EMAIL</FormControl.Label>
-                  <Input size="xl"/>
+                  <Input value = {email} onChangeText = {text=> setEmail(text)} size="xl"/>
                 </FormControl>
               <FormControl>
-                <FormControl.Label>CONTRASEÑA</FormControl.Label>
-                  <Input type="password" size="xl"/>
+                <FormControl.Label>CONTRASEÑA</FormControl.Label> 
+                  <Input value = {password} onChangeText = {text=> setPassword(text)} type="password" size="xl"/>
                     <Link _text={{
                       fontSize: "xs",
                       fontWeight: "500",
@@ -35,7 +61,7 @@ const Login = ({navigation}) => {
                         ¿Olvidaste tu contraseña?
                     </Link>
               </FormControl>
-              <TouchableOpacity onPress={() => navigation.navigate('RootClientTabs')} style={GlobalStyle.largeButton}>
+              <TouchableOpacity onPress={handleLogin} style={GlobalStyle.largeButton}>
                 <Text style={GlobalStyle.largeButtonText}>Iniciar sesión</Text>
               </TouchableOpacity>
               <HStack mt="6" justifyContent="center">

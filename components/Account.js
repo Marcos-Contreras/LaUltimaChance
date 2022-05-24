@@ -5,9 +5,20 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NativeBaseProvider, Text, Center, Box } from 'native-base';
 import { TouchableOpacity, StyleSheet } from 'react-native';
 import GlobalStyle from '../resources/GlobalStyle';
+import { auth } from '../database/firebase';
 
 
 function Account ({ navigation }) {
+
+    //PARA CERRAR SESIÓN
+    const handleSignOut = () => {
+      auth.signOut()
+      .then(() => {
+        navigation.replace("Login")
+      })
+      .catch(error => alert(error.message))
+    }
+
     return (
       <NativeBaseProvider>
         <Center w="100%" >
@@ -28,7 +39,7 @@ function Account ({ navigation }) {
             <Text style = {{ color: '#fff', fontSize: 22, fontWeight:'bold'}}  >Configuración</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => navigation.navigate('Login')} style = {styles.button}>
+          <TouchableOpacity onPress={handleSignOut} style = {styles.button}>
             <Text style = {{ color: '#fff', fontSize: 22, fontWeight:'bold'}}  >Cerrar sesión</Text>
           </TouchableOpacity>
           
