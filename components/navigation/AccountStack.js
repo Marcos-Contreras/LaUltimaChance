@@ -18,7 +18,7 @@ export default function AccountStack(){
               }}>
             <AccountScreens.Screen name = "Account" component = {Account} options = {{ 
                     headerShown: true,
-                    title: "Cuenta",
+                    title: "Account",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
@@ -30,25 +30,25 @@ export default function AccountStack(){
             />
             <AccountScreens.Screen name = "Settings" component = {Settings} options = {{ 
                     headerShown: true,
-                    title: "Configuración",
+                    title: "Configuration",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
             <AccountScreens.Screen name = "Contact" component = {Contact} options = {{ 
                     headerShown: true,
-                    title: "Contacto",
+                    title: "Contact",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
             <AccountScreens.Screen name = "Rate" component = {Rate} options = {{ 
                     headerShown: true,
-                    title: "Evaluar App",
+                    title: "Evaluate App",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
             <AccountScreens.Screen name = "Locate" component = {Locate} options = {{ 
                     headerShown: true,
-                    title: "Ubícanos",
+                    title: "Locate us",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
@@ -60,7 +60,7 @@ export default function AccountStack(){
             />
             <AccountScreens.Screen name = "Terms" component = {Terms} options = {{ 
                     headerShown: true,
-                    title: "Términos",
+                    title: "Terms",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />

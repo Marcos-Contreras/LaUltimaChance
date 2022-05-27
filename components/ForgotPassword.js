@@ -13,10 +13,10 @@ const ForgotPassword = ({navigation}) => {
                 require('../assets/Logo.png')
             } alt="Alternate Text" size="xl" style={GlobalStyle.logo}/>
             <Text style={GlobalStyle.largeLabelText}>
-              ¿Olvidaste tu contraseña?
+              Have you forgot your password?
             </Text>
             <Text style={GlobalStyle.smallLabelText}>
-                Ingresa tu email y se te enviará un correo con las instrucciones para cambiar tu contraseña
+                Type your email and we will send you a message with instructions to change it
             </Text>
 
             <VStack space={3} mt="5">
@@ -25,7 +25,7 @@ const ForgotPassword = ({navigation}) => {
                   <Input size="xl"/>
                 </FormControl>
               <TouchableOpacity onPress={() => navigation.navigate('Login')} style={GlobalStyle.largeButton}>
-                <Text style={GlobalStyle.largeButtonText}>Enviar correo</Text>
+                <Text style={GlobalStyle.largeButtonText}>SEND EMAIL</Text>
               </TouchableOpacity>
             </VStack>
           </Box>

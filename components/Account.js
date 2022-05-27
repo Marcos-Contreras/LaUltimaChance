@@ -24,23 +24,23 @@ function Account ({ navigation }) {
         <Center w="100%" >
         <Box safeArea p="2" py="8" w="90%" maxW="390" >
         <Text style={GlobalStyle.largeLabelText}>
-              CUENTA
+              ACCOUNT
             </Text>
         
           <TouchableOpacity onPress={() => navigation.navigate('PayPalLogin')} style = {styles.button}>
-            <Text style = {{ color: '#fff', fontSize: 22, fontWeight:'bold'}}  >PayPal</Text>
+            <Text style = {{ color: '#fff', fontSize: 20, fontWeight:'bold'}}  >PayPal</Text>
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => navigation.navigate('ForgotPassword')} style = {styles.button}>
-            <Text style = {{ color: '#fff', fontSize: 22, fontWeight:'bold'}}  >Recuperar o cambiar contraseña</Text>
+            <Text style = {{ color: '#fff', fontSize: 20, fontWeight:'bold'}}  >Recover password</Text>
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => navigation.navigate('Settings')} style = {styles.button}>
-            <Text style = {{ color: '#fff', fontSize: 22, fontWeight:'bold'}}  >Configuración</Text>
+            <Text style = {{ color: '#fff', fontSize: 20, fontWeight:'bold'}}  >Configuration</Text>
           </TouchableOpacity>
 
           <TouchableOpacity onPress={handleSignOut} style = {styles.button}>
-            <Text style = {{ color: '#fff', fontSize: 22, fontWeight:'bold'}}  >Cerrar sesión</Text>
+            <Text style = {{ color: '#fff', fontSize: 20, fontWeight:'bold'}}  >Log out</Text>
           </TouchableOpacity>
           
 
@@ -52,7 +52,7 @@ function Account ({ navigation }) {
 
   const styles = StyleSheet.create({
     button: {
-      backgroundColor: "#03A9F4",
+      backgroundColor: "#4182B0",
       paddingHorizontal: 16,
       borderRadius: 20,
       paddingVertical: 20,

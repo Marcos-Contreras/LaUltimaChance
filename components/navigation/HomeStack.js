@@ -29,31 +29,31 @@ export default function HomeStack({navigation}){
               }}>
             <HomeScreens.Screen name = "Home" component = {Home} options = {{ 
                     headerShown: true,
-                    title: "Inicio",
+                    title: "Home",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
             <HomeScreens.Screen name = "Categories" component = {Categories} options = {{ 
                     headerShown: true,
-                    title: "Categorías",
+                    title: "Categories",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
             <HomeScreens.Screen name = "Snack" component = {Snack} options = {{ 
                     headerShown: true,
-                    title: "Botanas",
+                    title: "Snacks",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
             <HomeScreens.Screen name = "DairyProducts" component = {DairyProducts} options = {{ 
                     headerShown: true,
-                    title: "Lácteos",
+                    title: "Dairy",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
             <HomeScreens.Screen name = "Beverages" component = {Beverages} options = {{ 
                     headerShown: true,
-                    title: "Novedades",
+                    title: "Beverages",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
@@ -64,13 +64,13 @@ export default function HomeStack({navigation}){
             />
             <HomeScreens.Screen name = "Offers" component = {Offers} options = {{ 
                     headerShown: true,
-                    title: "Ofertas",
+                    title: "Offers",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
             <HomeScreens.Screen name = "Packages" component = {Packages} options = {{ 
                     headerShown: true,
-                    title: "Paquetes",
+                    title: "Packages",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />

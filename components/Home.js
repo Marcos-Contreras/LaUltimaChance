@@ -11,32 +11,32 @@ function Home ({ navigation }) {
 
     <View style={styles.container}>
 
-            <Text style={GlobalStyle.largeLabelText}>
-                BIENVENIDO, {auth.currentUser?.email}
+            <Text style={GlobalStyle.welcome}>
+                Welcome, {auth.currentUser?.email}
             </Text>
 
       <TouchableOpacity style={styles.button1}
        activeOpacity={0.2}
        onPress={() => navigation.navigate('Categories')}>
-        <Text  style ={{  color: '#fff', fontSize: 30, fontWeight: 'bold'}}> PRODUCTOS </Text>
+        <Text  style ={{  color: '#fff', fontSize: 30, fontWeight: 'bold'}}> PRODUCTS </Text>
       </TouchableOpacity> 
 
        <TouchableOpacity style={styles.button2}
          activeOpacity={0.2}
       onPress={() => navigation.navigate('Offers')}>
-        <Text  style ={{  color: '#fff', fontSize: 30, fontWeight: 'bold'}}> ¡OFERTAS! </Text>
+        <Text  style ={{  color: '#fff', fontSize: 30, fontWeight: 'bold'}}> ¡OFFERS! </Text>
       </TouchableOpacity> 
 
       <TouchableOpacity style={styles.button3}
         activeOpacity={0.2}
       onPress={() => navigation.navigate('Novelty')}>
-        <Text  style ={{  color: '#fff', fontSize: 30, fontWeight: 'bold'}}> NOVEDADES </Text>
+        <Text  style ={{  color: '#fff', fontSize: 30, fontWeight: 'bold'}}> NOVELTY </Text>
       </TouchableOpacity> 
 
       <TouchableOpacity style={styles.button4}
         activeOpacity={0.2}
       onPress={() => navigation.navigate('Packages')}>
-        <Text  style ={{  color: '#fff', fontSize: 30, fontWeight: 'bold'}}> PAQUETES </Text>
+        <Text  style ={{  color: '#fff', fontSize: 30, fontWeight: 'bold'}}> PACKAGES </Text>
       </TouchableOpacity> 
 
     </View>

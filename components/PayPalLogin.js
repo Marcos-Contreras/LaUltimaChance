@@ -13,20 +13,20 @@ function PayPalLogin ({ navigation }) {
             <Heading mt="1" _dark={{
             color: "black"
             }} fontWeight="medium" size="xs">
-                Inicie Sesión con PayPal
+                Log in with PayPal
             </Heading>
     
             <VStack space={3} mt="2">
                 <FormControl>
-                <FormControl.Label>Email</FormControl.Label>
+                <FormControl.Label>EMAIL</FormControl.Label>
                 <Input />
                 </FormControl>
                 <FormControl>
-                <FormControl.Label>Contraseña</FormControl.Label>
+                <FormControl.Label>PASSWORD</FormControl.Label>
                 <Input type="password" />
                 </FormControl>
                 <Button mt="2" colorScheme="blue" onPress={() => navigation.navigate('PayPalAccount')}>
-                Iniciar Sesión
+                LOG IN
                 </Button>
             </VStack>
             </Box>

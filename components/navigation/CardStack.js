@@ -13,7 +13,7 @@ export default function CardStack(){
           }}>
             <CardScreens.Screen name = "Card" component = {Card} options = {{ 
                     headerShown: true,
-                    title: "Carrito",
+                    title: "Cart",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />
@@ -25,7 +25,7 @@ export default function CardStack(){
             />
             <CardScreens.Screen name = "Thanks" component = {Thanks} options = {{ 
                     headerShown: true,
-                    title: "",
+                    title: "Thank you",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />

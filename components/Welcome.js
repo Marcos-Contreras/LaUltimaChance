@@ -14,10 +14,10 @@ function Welcome ({ navigation }) {
                 require('../assets/Logo.png')
             } alt="Alternate Text" size="xl" style={GlobalStyle.logo}/>
             <TouchableOpacity onPress={() => navigation.navigate('Login')} style={GlobalStyle.largeButton}>
-                <Text style={GlobalStyle.largeButtonText}>Iniciar sesión</Text>
+                <Text style={GlobalStyle.largeButtonText}>LOG IN</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={() => navigation.navigate('SignUp')} style={GlobalStyle.largeButton}>
-                <Text style={GlobalStyle.largeButtonText}>Registrarse</Text>
+                <Text style={GlobalStyle.largeButtonText}>REGISTER</Text>
             </TouchableOpacity>
         </Box>
         

@@ -17,10 +17,10 @@ function Thanks ({ navigation }) {
        
     />
         
-        <Heading> Gracias por su compra</Heading> 
-        <Text> Número de compra: 40005</Text> 
+        <Heading> Thanks for your purchase</Heading> 
+        <Text> Purchase number: 40005</Text> 
         <Text>{"\n"}</Text>
-        <Button backgroundColor={"#002171"} width={200} onPress={() => navigation.navigate('Home')} >Continuar comprando</Button>
+        <Button backgroundColor={"#002171"} width={200} onPress={() => navigation.navigate('Home')} >CONTINUE BUYING</Button>
         </Box>
       </NativeBaseProvider>
     );

@@ -45,7 +45,7 @@ const DNovelty = ({navigation, route}) => {
           </View>
         </View>
         <View style={{paddingHorizontal: 20, marginTop: 10}}>
-          <Text style={{fontSize: 20, fontWeight: 'bold'}}>Descripción</Text>
+          <Text style={{fontSize: 20, fontWeight: 'bold'}}>Description</Text>
           <Text
             style={{
               color: 'grey',
@@ -55,7 +55,7 @@ const DNovelty = ({navigation, route}) => {
             }}>
             {productos.about}
           </Text>
-          <Text style={{fontSize: 20, fontWeight: 'bold'}}>Fecha de caducidad</Text>
+          <Text style={{fontSize: 20, fontWeight: 'bold'}}>Date of Expiry</Text>
           <Text
             style={{
               color: 'grey',
@@ -74,7 +74,7 @@ const DNovelty = ({navigation, route}) => {
 
             <View>
             <TouchableOpacity onPress={() => navigation.navigate('Cart')} style={GlobalStyle.largeButton}>
-                <Text style={GlobalStyle.largeButtonText}>Añadir al carrito</Text>
+                <Text style={GlobalStyle.largeButtonText}>ADD TO CART</Text>
               </TouchableOpacity>
             </View>
           </View>

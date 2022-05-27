@@ -38,26 +38,26 @@ const SignUp = ({navigation}) => {
                     } alt="Alternate Text" size="xl" style={GlobalStyle.logo}/>
                     <VStack space={3} mt="5">
                         <Text style={GlobalStyle.largeLabelText}>
-                            Regístrate
+                            Register
                         </Text>
                         <Text style={GlobalStyle.smallLabelText}>
-                            Registrate como usuario para continuar
+                            Register to continue
                         </Text>
                         <FormControl>
                             <FormControl.Label>EMAIL</FormControl.Label>
-                            <Input value = {email} onChangeText = {text=> setEmail(text)}/>
+                            <Input size="xl" value = {email} onChangeText = {text=> setEmail(text)}/>
                         </FormControl>
                         <FormControl>
-                            <FormControl.Label>CONTRASEÑA</FormControl.Label>
+                            <FormControl.Label>PASSWORD</FormControl.Label>
                             <Input value = {password} onChangeText = {text=> setPassword(text)} type="password"/>
                         </FormControl>
                         <FormControl>
-                            <FormControl.Label>CONFIRMAR CONTRASEÑA</FormControl.Label>
-                                <Input type="password" />
+                            <FormControl.Label>CONFIRM PASSWORD</FormControl.Label>
+                                <Input type="password" size="xl"/>
                             </FormControl>
                         {/* <TouchableOpacity onPress={() => navigation.navigate('RootClientTabs')} style={GlobalStyle.largeButton}> */}
                         <TouchableOpacity onPress={handleSignUp} style={GlobalStyle.largeButton}>
-                            <Text style={GlobalStyle.largeButtonText}>Registrarme</Text>
+                            <Text style={GlobalStyle.largeButtonText}>REGISTER</Text>
                         </TouchableOpacity>
                     </VStack>
                 </Box>

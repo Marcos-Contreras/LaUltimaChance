@@ -61,4 +61,26 @@ export default StyleSheet.create({
     input: {
         
     },
+    deleteButton: {
+        width: 100,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        paddingHorizontal: 5,
+        paddingVertical: 5,
+        backgroundColor: '#CC0505',
+        shadowOpacity: 30,
+        shadowRadius: 4,
+        shadowOffset:{
+            width: 0,
+            height: 2
+        },
+        elevation: 2,
+        margin: 5,
+        },
+        welcome: {
+            color: 'black',
+            fontSize: 25,
+            fontWeight: 'bold',
+            marginBottom: 50
+        },
 });

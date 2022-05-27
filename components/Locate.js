@@ -6,7 +6,7 @@ function Locate() {
       <NativeBaseProvider>
       <Box p="4" py="5" w="100%" maxW="300" alignItems='center'>
       <VStack space={1} alignItems="center">
-                <Text bold italic fontSize="3xl">Nuestra Ubicación</Text> 
+                <Text bold fontSize="30">Our location</Text> 
             </VStack>
         <Image shadow={2} source={{
           uri: 'https://s3.amazonaws.com/ciudad.mapasdemexico.com.mx/mapa-aguascalientes-aguascalientes.jpg'

@@ -1,91 +1,111 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import {View, SafeAreaView, Image, Text, StyleSheet, Button, ScrollView, TouchableOpacity} from 'react-native';
 import GlobalStyle from '../resources/GlobalStyle';
+import firebase from '../database/firebase';
+import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 
 const DPackages = ({navigation, route}) => {
 
-  const addToCart = () => {
+  const [product, setProduct] = useState();
 
+  //AÑADIR EL PRODUCTO AL CARRITO
+  const addToCart = async (name, price) => {
+      try {
+        await firebase.db.collection("cart").add({
+          name: name,
+          price: price,
+        })
+        navigation.navigate('Card');
+      } catch (error) {
+        console.log(eror);
+      }
   }
 
   const productos = route.params;
 
   return (
-  <ScrollView>
-    <SafeAreaView
-      style={{
-        flex: 1,
-        backgroundColor: 'white',
-      }}>
-      <View style={style.imageContainer}>
-        <Image source={productos.img} style={{resizeMode: 'contain', flex: 1}} />
-      </View>
-      <View style={style.detailsContainer}>
-        <View
-          style={{
-            marginLeft: 20,
-            flexDirection: 'column',
-            alignItems: 'flex-end',
-          }}>
-        </View>
-        <View
-          style={{
-            marginLeft: 20,
-            marginTop: 20,
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-          }}>
-          <Text style={{fontSize: 22, fontWeight: 'bold'}}>{productos.name}</Text>
-          <View style={style.priceTag}>
-            <Text
+    <ScrollView >
+      {/* {products.map(product => {
+        return ( */}
+          
+            {/* <SafeAreaView key={product.id} */}
+            <SafeAreaView
               style={{
-                //marginLeft: 15,
-                color: 'white',
-                fontWeight: 'bold',
-                fontSize: 16,
+                flex: 1,
+                backgroundColor: 'white',
               }}>
-              ${productos.price}
-            </Text>
-          </View>
-        </View>
-        <View style={{paddingHorizontal: 20, marginTop: 10}}>
-          <Text style={{fontSize: 20, fontWeight: 'bold'}}>Descripción</Text>
-          <Text
-            style={{
-              color: 'grey',
-              fontSize: 16,
-              lineHeight: 22,
-              marginTop: 10,
-            }}>
-            {productos.about}
-          </Text>
-          <Text
-            style={{
-              color: 'grey',
-              fontSize: 16,
-              lineHeight: 22,
-              marginTop: 10,
-            }}>
-            {productos.date}
-          </Text>
-          <View
-            style={{
-              marginTop: 20,
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-            }}>
+              <View style={style.imageContainer}>
+                <Image source={productos.img} style={{resizeMode: 'contain', flex: 1}} />
+              </View>
+              <View style={style.detailsContainer}>
+              <View
+                style={{
+                  marginLeft: 20,
+                  flexDirection: 'column',
+                  alignItems: 'flex-end',
+              }}>
+              </View>
+              <View
+                style={{
+                  marginLeft: 20,
+                  marginTop: 20,
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+              }}>
+              <Text style={{fontSize: 30, fontWeight: 'bold'}}>{productos.name}</Text>
+              <View style={style.priceTag}>
+                <Text
+                  style={{
+                    //marginLeft: 15,
+                    color: 'white',
+                    fontWeight: 'bold',
+                    fontSize: 16,
+                  }}>
+                  ${productos.price}
+                </Text>
+              </View>
+            </View>
+            <View style={{paddingHorizontal: 20, marginTop: 10}}>
+              <Text style={{fontSize: 20, fontWeight: 'bold'}}>Description:</Text>
+              <Text
+                style={{
+                  color: 'grey',
+                  fontSize: 16,
+                  lineHeight: 22,
+                  marginTop: 10,
+                }}>
+                {productos.about}
+              </Text>
+              <Text
+                style={{
+                  color: 'grey',
+                  fontSize: 16,
+                  lineHeight: 22,
+                  marginTop: 10,
+                }}>
+                {productos.date}
+              </Text>
+              <View
+                style={{
+                  marginTop: 20,
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                }}>
 
-            <View>
-            <TouchableOpacity onPress={() => addToCart()} style={GlobalStyle.largeButton}>
-                <Text style={GlobalStyle.largeButtonText}>Añadir al carrito</Text>
-              </TouchableOpacity>
+                <View>
+                <TouchableOpacity onPress={() => addToCart(productos.name, productos.price)} style={GlobalStyle.largeButton}>
+                    <Text style={GlobalStyle.largeButtonText}>ADD TO CART</Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
             </View>
           </View>
-        </View>
-      </View>
-    </SafeAreaView>
-  </ScrollView>
+        </SafeAreaView>
+        
+      
+      {/* })}     */}
+    </ScrollView>
   );
 };
 

@@ -22,9 +22,9 @@ function PayPalAccount ({ navigation }) {
                     fontWeight: "bold"
                     }
                 }}>
-                    Nombre de usuario
+                    USER NAME
                     </FormControl.Label>
-                    <Input placeholder="Nombre de Ejemplo" />
+                    <Input placeholder="Example name" />
                 </FormControl>
                 <Divider />
             </Box>
@@ -35,7 +35,7 @@ function PayPalAccount ({ navigation }) {
                     fontWeight: "bold"
                     }
                 }}>
-                    Correo electrónico
+                    EMAIL
                     </FormControl.Label>
                     <Input placeholder="user@example.com" />
                 </FormControl>
@@ -48,7 +48,7 @@ function PayPalAccount ({ navigation }) {
                     fontWeight: "bold"
                     }
                 }}>
-                    No. de Cuenta Bancaria
+                    BANK ACCOUNT NO.
                     </FormControl.Label>
                     <Input placeholder="2459 *** *** *** ***" />
                 </FormControl>

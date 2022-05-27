@@ -26,7 +26,7 @@ export default function RootClientTabs(){
                 name="HomeScreen"
                 component = {HomeStack}
                 options ={{ 
-                    tabBarLabel : "INICIO",
+                    tabBarLabel : "HOME",
                     navBarHidden : true,
                     headerShown : false,
                     tabBarIcon : ({color})=>(
@@ -45,7 +45,7 @@ export default function RootClientTabs(){
                 name="Cart"
                 component = {CardStack}
                 options ={{ 
-                    tabBarLabel : "CARRITO",
+                    tabBarLabel : "CART",
                     headerShown : false,
                     tabBarIcon : ({color, size})=>(
                         <MaterialCommunityIcons
@@ -62,7 +62,7 @@ export default function RootClientTabs(){
                 name="Accounts"
                 component = {AccountStack}
                 options ={{ 
-                    tabBarLabel : "CUENTA",
+                    tabBarLabel : "ACCOUNT",
                     headerShown : false,
                      tabBarIcon : ({color, size})=>(
                         <MaterialCommunityIcons

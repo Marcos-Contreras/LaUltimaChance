@@ -39,10 +39,10 @@ const Login = ({navigation}) => {
                 require('../assets/Logo.png')
             } alt="Alternate Text" size="xl" style={GlobalStyle.logo}/>
             <Text style={GlobalStyle.largeLabelText}>
-              Inicia sesión
+              Log in
             </Text>
             <Text style={GlobalStyle.smallLabelText}>
-                Ingresa para continuar
+                Log in to continue
             </Text>
 
             <VStack space={3} mt="5">
@@ -51,31 +51,31 @@ const Login = ({navigation}) => {
                   <Input value = {email} onChangeText = {text=> setEmail(text)} size="xl"/>
                 </FormControl>
               <FormControl>
-                <FormControl.Label>CONTRASEÑA</FormControl.Label> 
+                <FormControl.Label>PASSWORD</FormControl.Label> 
                   <Input value = {password} onChangeText = {text=> setPassword(text)} type="password" size="xl"/>
                     <Link _text={{
                       fontSize: "xs",
                       fontWeight: "500",
                       color: "#007AC1"
                     }} alignSelf="flex-end" mt="1" onPress={() => navigation.navigate('ForgotPassword')}>
-                        ¿Olvidaste tu contraseña?
+                        Forgot your password?
                     </Link>
               </FormControl>
               <TouchableOpacity onPress={handleLogin} style={GlobalStyle.largeButton}>
-                <Text style={GlobalStyle.largeButtonText}>Iniciar sesión</Text>
+                <Text style={GlobalStyle.largeButtonText}>LOG IN</Text>
               </TouchableOpacity>
               <HStack mt="6" justifyContent="center">
                 <Text fontSize="sm" color="coolGray.600" _dark={{
                   color: "warmGray.200"
                 }}>
-                    Soy un nuevo usuario.{" "}
+                    I'm a new user.{" "}
                 </Text>
                 <Link _text={{
                   color: "#007AC1",
                   fontWeight: "medium",
                   fontSize: "sm"
                 }} onPress={() => navigation.navigate('SignUp')}>
-                    Registrarme
+                    Register
                 </Link>
               </HStack>
             </VStack>

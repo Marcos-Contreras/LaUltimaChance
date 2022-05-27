@@ -11,17 +11,17 @@ function Categories({ navigation }) {
 
       <TouchableOpacity style={styles.button1}
       onPress={() => navigation.navigate('Snack')}>
-        <Text style ={{  color: '#fff', fontSize: 30, fontWeight: 'bold'}} > BOTANAS </Text>
+        <Text style ={{  color: '#fff', fontSize: 30, fontWeight: 'bold'}} > SNACKS </Text>
       </TouchableOpacity> 
 
        <TouchableOpacity style={styles.button2}
       onPress={() => navigation.navigate('DairyProducts')}>
-        <Text  style ={{  color: '#fff', fontSize: 30, fontWeight: 'bold'}}> LÁCTEOS </Text>
+        <Text  style ={{  color: '#fff', fontSize: 30, fontWeight: 'bold'}}> DAIRY </Text>
       </TouchableOpacity> 
 
       <TouchableOpacity style={styles.button3}
       onPress={() => navigation.navigate('Beverages')}>
-        <Text  style ={{  color: '#fff', fontSize: 30, fontWeight: 'bold'}}> BEBIDAS </Text>
+        <Text  style ={{  color: '#fff', fontSize: 30, fontWeight: 'bold'}}> BEVERAGES </Text>
       </TouchableOpacity> 
 
     </View>

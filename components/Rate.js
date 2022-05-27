@@ -36,7 +36,7 @@ import { NativeBaseProvider, VStack, Text, Box, Stack, TextArea } from 'native-b
         return (
             <NativeBaseProvider>
                 <VStack space={1} alignItems="center">
-                    <Text bold italic fontSize="4xl">Calificanos</Text> 
+                    <Text bold fontSize="40">Rate us</Text> 
                 </VStack>
             
                 <Box alignItems="center" w="100%">
@@ -50,9 +50,9 @@ import { NativeBaseProvider, VStack, Text, Box, Stack, TextArea } from 'native-b
                     <Stack space={2} w="100%" maxW="300">
                     <Box>
                         <Text mb="4" bold fontSize="lg">
-                            Dejanos tu opinión o comentarios:
+                            Leave your opinion/comment:
                         </Text>
-                        <TextArea h={20} style={styles.textAreaStyle} placeholder="Yo pienso que..." w="100%" maxW="300" />
+                        <TextArea h={20} style={styles.textAreaStyle} placeholder="I think..." w="100%" maxW="300" />
                     </Box>
                     </Stack>
                     <TouchableOpacity
@@ -61,7 +61,7 @@ import { NativeBaseProvider, VStack, Text, Box, Stack, TextArea } from 'native-b
                         onPress={() => alert('Su calificación fue: ' + defaultRating + '. Gracias por su opinión')}>
                         <Text
                         style={styles.textButtonStyle}>
-                            Enviar Calificación
+                            SEND RATE
                         </Text>
                     </TouchableOpacity>
                 </Box>

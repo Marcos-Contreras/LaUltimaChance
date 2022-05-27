@@ -12,40 +12,40 @@ function Terms ({ navigation }) {
         <ScrollView style={{width:'100%'}} >
         <Center bg="#fff">
         <Container >
-        <Heading mt="5">Terminos y condiciones.</Heading>
+        <Heading mt="5">Terms and conditions.</Heading>
           
-          <Text mt="3" style={{textAlign: "justify"}} >Es requisito necesario para la adquisición de los servicios que se ofrecen
-          en este sitio, que lea y acepte los siguientes Términos y Condiciones que a continuación
-          se redactan. El uso de nuestros servicios implicará que usted ha leído y aceptado los 
-          Términos y Condiciones de Uso en el presente documento. Todas los servicios que son
-          ofrecidos por nuestro sitio web pudieran ser creadas, cobradas, enviadas o presentadas
-          por una página web tercera y en tal caso estarían sujetas a sus propios Términos y Condiciones.
+          <Text mt="3" style={{textAlign: "justify"}} >It is a necessary requirement for the acquisition of the services offered
+          on this site, that you read and accept the following Terms and Conditions below
+          are drafted. The use of our services will imply that you have read and accepted the
+          Terms and Conditions of Use in this document. All the services that are
+          offered by our website could be created, charged, sent or presented
+          by a third web page and in such case they would be subject to their own Terms and Conditions.
           <Text>{"\n"}</Text>
           <Text>{"\n"}</Text>
-          En algunos casos, para adquirir un servicio, será necesario el registro por parte del usuario,
-          con ingreso de datos personales fidedignos y definición de una contraseña.
-          El usuario puede elegir y cambiar la clave para su acceso de administración de la cuenta en
-          cualquier momento, en caso de que se haya registrado y que sea necesario para la solicitud
-          de alguno de nuestros servicios.  La Última Chance Ags no asume la responsabilidad en caso
-          de que entregue dicha clave a terceros.</Text>
-          <Heading mt="5" >Aviso de privacidad.</Heading>
-          <Text mt="3" style={{textAlign: "justify"}}>En cumplimiento con lo establecido por la Ley Federal de Protección de Datos Personales
-          en Posesión de Particulares, La Última Chance Ags Comercio Electrónico SA de CV, en lo
-          sucesivo señalada como "La Última Chance Ags", ubicado en Lic. Adolfo López Mateos
-          408-Local A. Col. Centro C.P 20000 en Aguascalientes, Aguascalientes, México, como
-          Responsable de sus Datos Personales hacen de su conocimiento la política de privacidad
-          y manejo de datos personales, en la que en todo momento buscarán que el tratamiento de los
-          mismos sea legítimo, controlado e informado, a efecto de asegurar la privacidad,
-          confidencialidad, integridad y el derecho a la autodeterminación informativa de sus datos.
+          In some cases, to acquire a service, registration by the user will be necessary,
+          with entry of reliable personal data and definition of a password.
+          The user can choose and change the password for their account management access at
+          any time, in case you have registered and it is necessary for the application
+          of any of our services. Last Chance Ags assumes no responsibility in the event
+          to deliver said key to third parties.</Text>
+          <Heading mt="5" >Notice of Privacy.</Heading>
+          <Text mt="3" style={{textAlign: "justify"}}>In compliance with the provisions of the Federal Law on Protection of Personal Data
+          in Possession of Individuals, La Última Chance Ags Comercio Electrónica SA de CV, in what
+          successively indicated as "La Última Chance Ags", located in Lic. Adolfo López Mateos
+          408-Local A. Col. Centro C.P 20000 in Aguascalientes, Aguascalientes, Mexico, as
+          Responsible for your Personal Data make your privacy policy known
+          and handling of personal data, in which at all times they will seek that the treatment of the
+          themselves is legitimate, controlled and informed, in order to ensure privacy,
+          confidentiality, integrity and the right to informative self-determination of your data.
 </Text>
-          <Heading mt="5">Políticas de envios y devoluciones.</Heading>
-          <Text mt="3" style={{textAlign: "justify"}}>Los precios publicados en el sitio NO incluyen costo de envío dentro de la República Mexicana
-          salvo cuando expresamente lo indique algún equipo o alguna promoción en particular, los precios
-          de los productos pueden cambiar en cualquier momento sin previo aviso, no se pueden combinar
-          promociones de otros medios distintos a los presentados en este sitio. El cliente se compromete
-          a proporcionar una dirección válida localizable dentro de la república mexicana donde pueda
-          entregársele el pedido. En caso de que el cliente proporcione una dirección que no sea
-          localizada por la paquetería, cualquier otro costo adicional será cubierto por el cliente mismo.</Text>
+          <Heading mt="5">Shipping and return policies.</Heading>
+          <Text mt="3" style={{textAlign: "justify"}}>The prices published on the site DO NOT include shipping costs within the Mexican Republic
+          Except when expressly indicated by a particular team or promotion, the prices
+          of the products can change at any time without prior notice, they cannot be combined
+          promotions from other means than those presented on this site. The client agrees
+          to provide a valid address located within the Mexican Republic where you can
+          deliver the order. In case the client provides an address that is not
+          located by the parcel, any other additional cost will be covered by the customer.</Text>
           <Text>{"\n"}</Text>
         </Container>
         </Center>

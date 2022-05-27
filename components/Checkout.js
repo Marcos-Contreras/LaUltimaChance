@@ -17,37 +17,37 @@ function Checkout ({ navigation }) {
         <HStack space={1} justifyContent="center">
         
       <Box my={10} marginLeft={5} flex={1} >
-      <Heading mx="3">Tus datos</Heading>
-      <Input mx="3" my="1" placeholder="Nombre" w="80%" maxWidth="320px" />
-      <Input mx="3" my="1" placeholder="Apellidos" w="80%" maxWidth="300px" />
-      <Input mx="3" my="1" placeholder="Correo electrónico" w="80%" maxWidth="300px" />
-      <Heading mx="3">Dirección</Heading>
-      <Input mx="3" my="1" placeholder="Domicilio" w="80%" maxWidth="300px" />
-      <Select marginX={1.5} my="1" w="85%" selectedValue={service} maxWidth="300px" accessibilityLabel="Paiis" placeholder="País" _selectedItem={{
+      <Heading mx="3">Your data</Heading>
+      <Input mx="3" my="1" placeholder="Name" w="80%" maxWidth="320px" />
+      <Input mx="3" my="1" placeholder="Last name" w="80%" maxWidth="300px" />
+      <Input mx="3" my="1" placeholder="Email" w="80%" maxWidth="300px" />
+      <Heading mx="3">Address</Heading>
+      <Input mx="3" my="1" placeholder="Address" w="80%" maxWidth="300px" />
+      <Select marginX={1.5} my="1" w="85%" selectedValue={service} maxWidth="300px" accessibilityLabel="Paiis" placeholder="Country" _selectedItem={{
         bg: "teal.600",
         endIcon: <CheckIcon size="5" />
       }} mt={1} onValueChange={itemValue => setService(itemValue)}>
           <Select.Item label="México" value="mex" />
         </Select>
-        <Select marginX={1.5} my="1" w="85%" selectedValue={service1} maxWidth="300px" accessibilityLabel="Estadoo" placeholder="Estado" _selectedItem={{
+        <Select marginX={1.5} my="1" w="85%" selectedValue={service1} maxWidth="300px" accessibilityLabel="Estadoo" placeholder="State" _selectedItem={{
         bg: "teal.600",
         endIcon: <CheckIcon size="5" />
       }} mt={1} onValueChange={itemValue => setService1(itemValue)}>
           <Select.Item label="Aguascalientes" value="ags" />
         </Select>
-        <Select marginX={1.5} my="1" w="85%" selectedValue={service2} maxWidth="300px" accessibilityLabel="Municioo" placeholder="Municipio" _selectedItem={{
+        <Select marginX={1.5} my="1" w="85%" selectedValue={service2} maxWidth="300px" accessibilityLabel="Municioo" placeholder="City" _selectedItem={{
         bg: "teal.600",
         endIcon: <CheckIcon size="5" />
       }} mt={1} onValueChange={itemValue => setService2(itemValue)}>
           <Select.Item label="Aguascalientes" value="agss" />
           <Select.Item label="Jesús María" value="jm" />
         </Select>      
-      <Input mx="3" my="1" placeholder="Código Postal" w="80%" maxWidth="300px" />
-      <Input mx="3" my="1" placeholder="Número de telefono" w="80%" maxWidth="300px" />
+      <Input mx="3" my="1" placeholder="Postal code" w="80%" maxWidth="300px" />
+      <Input mx="3" my="1" placeholder="Phone number" w="80%" maxWidth="300px" />
 
       </Box> 
       <Box my={10} marginRight={5} flex={1} > 
-      <Heading>Envio</Heading>
+      <Heading>Shipping</Heading>
       <Radio.Group
             name="myRadioGroup"
             accessibilityLabel="favorite number"
@@ -57,16 +57,16 @@ function Checkout ({ navigation }) {
             }}
           >
             <Radio size={"sm"} value="one" my={1}>
-              <Text mx="2">La Última Chance envio <Text>{"\n"}</Text>$10 - Zona centro</Text> 
+              <Text mx="2">La Última Chance shipping <Text>{"\n"}</Text>$10 - Downtown area</Text> 
             </Radio>
             <Radio size={"sm"} value="two" my={1}>
-            <Text mx="2">La Última Chance envio <Text>{"\n"}</Text>$20 - Fuera del centro</Text> 
+            <Text mx="2">La Última Chance shipping <Text>{"\n"}</Text>$20 - Outside the downtown area</Text> 
             </Radio>
             <Radio size={"sm"} value="three" my={1}>
-            <Text mx="2">Recoger en tienda<Text>{"\n"}</Text>$0 - Gratis</Text> 
+            <Text mx="2">Store Pickup<Text>{"\n"}</Text>$0 - Free</Text> 
             </Radio>
           </Radio.Group>
-          <Heading mt={3}>Pago</Heading>
+          <Heading mt={3}>Payment</Heading>
       <Radio.Group
             name="myRadioGroup1"
             accessibilityLabel="favorite number1"
@@ -100,7 +100,7 @@ function Checkout ({ navigation }) {
             
           </Radio.Group>
 
-          <Checkbox size="sm" value="test" accessibilityLabel="checkbox"><Text mx="2">He leído los <Link _text={{
+          <Checkbox size="sm" value="test" accessibilityLabel="checkbox"><Text mx="2">I have read <Link _text={{
       
       _light: {
         color: "cyan.500"
@@ -114,15 +114,16 @@ function Checkout ({ navigation }) {
         color: "cyan.400"
       }
     }}>
-        Terminos y condiciones.
+        the terms
+        and conditions
       </Link></Text></Checkbox> 
       </Box> 
     </HStack>
 
-    <Heading>Resumen</Heading>
+    <Heading>Summary</Heading>
     <Divider  bg={"#000"} width={"50%"}>  </Divider>
-    <Heading my="1">Total a pagar: 78$</Heading>
-    <Button width={"50%"} height={"6%"} my="2" bg={"#002171"} onPress={() => navigation.navigate("Thanks")}>Comprar ahora</Button>
+    <Heading my="1">Total to pay: 78$</Heading>
+    <Button width={"50%"} height={"6%"} my="2" bg={"#002171"} onPress={() => navigation.navigate("Thanks")}>BUY NOW</Button>
 
     
         </Box>

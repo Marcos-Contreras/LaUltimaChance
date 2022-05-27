@@ -2,26 +2,27 @@ import * as React from 'react';
 import {TouchableOpacity, StyleSheet} from 'react-native';
 //IMPORTANDO NATIVEBASE
 import { NativeBaseProvider, VStack, Text, Box, Divider } from 'native-base';
+import { color } from 'react-native-reanimated';
 
 function Settings({navigation}){
     return (
         <NativeBaseProvider>
             <VStack space={1} alignItems="center">
-                <Text bold italic fontSize="4xl">Configuración</Text> 
+                <Text bold fontSize="4xl">Configuration</Text> 
             </VStack>
             <Box alignItems="center" marginTop="30">
-                <Text mb="2" bold fontSize="lg">Cambiar idioma</Text>
+                <Text mb="2" bold fontSize="lg">Change language</Text>
                 <TouchableOpacity
                     style={styles.buttonStyle}
                     //onPress={}
                 >
-                    <Text style={styles.textButtonStyle}>Español</Text>
+                    <Text style={styles.textButtonStyle}>Spanish</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.buttonStyle}
                     //onPress={}
                 >
-                    <Text style={styles.textButtonStyle}>Inglés</Text>
+                    <Text style={styles.textButtonStyle}>English</Text>
                 </TouchableOpacity>
                 <Divider />
             </Box>
@@ -30,28 +31,28 @@ function Settings({navigation}){
                     style={styles.buttonStyle}
                     onPress={() => navigation.navigate('Terms')}
                 >
-                    <Text style={styles.textButtonStyle}>Términos y Sobre la App</Text>
+                    <Text style={styles.textButtonStyle}>Terms and About</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
                     style={styles.buttonStyle}
                     onPress={() => navigation.navigate('Contact')}
                 >
-                    <Text style={styles.textButtonStyle}>Contacto</Text>
+                    <Text style={styles.textButtonStyle}>Contact</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
                     style={styles.buttonStyle}
                     onPress={() => navigation.navigate('Rate')}
                 >
-                    <Text style={styles.textButtonStyle}>Evaluar App</Text>
+                    <Text style={styles.textButtonStyle}>Rate us</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
                     style={styles.buttonLocateStyle}
                     onPress={() => navigation.navigate('Locate')}
                 >
-                    <Text style={styles.textButtonStyle}>Ubícanos</Text>
+                    <Text style={styles.textButtonStyle}>Locate us</Text>
                 </TouchableOpacity>
             </Box>
         </NativeBaseProvider>
@@ -67,10 +68,11 @@ function Settings({navigation}){
         marginTop: 5,
         marginBottom:5,
         padding: 10,
-        backgroundColor: 'lightblue'
+        backgroundColor: '#4182B0'
         },
         textButtonStyle: {
-      fontSize: 16
+      fontSize: 19,
+      color: 'white'
     },
     buttonLocateStyle: {
         justifyContent: 'center',
