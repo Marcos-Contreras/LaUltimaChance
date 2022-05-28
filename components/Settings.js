@@ -2,7 +2,6 @@ import * as React from 'react';
 import {TouchableOpacity, StyleSheet} from 'react-native';
 //IMPORTANDO NATIVEBASE
 import { NativeBaseProvider, VStack, Text, Box, Divider } from 'native-base';
-import { color } from 'react-native-reanimated';
 
 function Settings({navigation}){
     return (

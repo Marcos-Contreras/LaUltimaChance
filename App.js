@@ -7,14 +7,14 @@ import Welcome from './components/Welcome';
 import SignUp from './components/SignUp';
 import ForgotPassword from './components/ForgotPassword';
 import RootClientTabs from './components/navigation/ClientTabs';
-import Toolbar from './components/elements/Toolbar';
+import AccountStack from './components/navigation/AccountStack';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Welcome" screenOptions={{
+      <Stack.Navigator initialRouteName="Login" screenOptions={{
                 headerTintColor: 'white',
                 headerStyle: { backgroundColor: '#002171' },
               }}>
@@ -24,7 +24,7 @@ export default function App() {
         <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
         {/* PANTALLAS DE BOTTOM NAVIGATION */}
         <Stack.Screen name="RootClientTabs" component={RootClientTabs} options = {{ headerShown: false }}/>
-        <Stack.Screen name="Toolbar" component={Toolbar}/>
+        <Stack.Screen name="AccountStack" component={AccountStack} options = {{ headerShown: false }}/>
       </Stack.Navigator>
       
     </NavigationContainer>

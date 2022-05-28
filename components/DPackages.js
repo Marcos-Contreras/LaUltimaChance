@@ -35,7 +35,7 @@ const DPackages = ({navigation, route}) => {
                 backgroundColor: 'white',
               }}>
               <View style={style.imageContainer}>
-                <Image source={productos.img} style={{resizeMode: 'contain', flex: 1}} />
+                <Image source={{uri:productos.img}} style={{flex: 1, resizeMode: 'contain', width: 250, height: 250}} />
               </View>
               <View style={style.detailsContainer}>
               <View

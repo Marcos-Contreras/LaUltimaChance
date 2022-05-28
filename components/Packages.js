@@ -7,12 +7,9 @@ import {
   FlatList,
   Image,
   Dimensions,
+  ScrollView
 } from 'react-native';
 import {TouchableOpacity} from 'react-native';
-//import Icon from 'react-native-vector-icons/MaterialIcons';
-//import COLORS from '../../consts/colors';
-import DescPackages from './DescPackages.js';
-const width = Dimensions.get('window').width / 2 - 30;
 import firebase from '../database/firebase';
 
 const Packages = ({navigation}) => {
@@ -45,7 +42,7 @@ const Packages = ({navigation}) => {
     <SafeAreaView
       style={{flex: 1, paddingHorizontal: 20, backgroundColor: 'white'}}>
       
-      
+      <ScrollView>
 
         {packges.map(packge => {
           return (
@@ -72,8 +69,8 @@ const Packages = ({navigation}) => {
                   alignItems: 'center',
                 }}>
                 <Image
-                  source={packge.img}
-                  style={{flex: 1, resizeMode: 'contain'}}
+                  source={{ uri: packge.img }}
+                  style={{flex: 1, resizeMode: 'contain', width: 400, height: 400}}
                 />
               </View>
     
@@ -107,7 +104,7 @@ const Packages = ({navigation}) => {
           )
         })}
 
-
+        </ScrollView>
     </SafeAreaView>
   );
 };
