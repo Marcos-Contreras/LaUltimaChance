@@ -2,10 +2,20 @@ import * as React from "react";
 import { useToast, Image, Box, Text, VStack, FormControl, Input, Link, Button, HStack, Center, NativeBaseProvider } from "native-base";
 import GlobalStyle from '../resources/GlobalStyle';
 import { TouchableOpacity } from 'react-native';
+import { auth } from '../database/firebase';
 
 const ForgotPassword = ({navigation}) => {
+
+  //PARA CERRAR SESIÓN
+  const handleSignOut = () => {
+    auth.signOut()
+    .then(() => {
+      navigation.replace("Login")
+    })
+    .catch(error => alert(error.message))
+  }
+
   return (
-  
       <NativeBaseProvider>
         <Center w="100%" bg="#fff">
           <Box safeArea p="2" py="8" w="90%" maxW="390">
@@ -24,7 +34,7 @@ const ForgotPassword = ({navigation}) => {
                 <FormControl.Label>EMAIL</FormControl.Label>
                   <Input size="xl"/>
                 </FormControl>
-              <TouchableOpacity onPress={() => navigation.navigate('Login')} style={GlobalStyle.largeButton}>
+              <TouchableOpacity onPress={handleSignOut} style={GlobalStyle.largeButton}>
                 <Text style={GlobalStyle.largeButtonText}>SEND EMAIL</Text>
               </TouchableOpacity>
             </VStack>

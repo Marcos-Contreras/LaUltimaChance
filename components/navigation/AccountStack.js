@@ -8,6 +8,8 @@ import Contact from '../Contact';
 import Rate from '../Rate';
 import Locate from '../Locate';
 import PayPalAccount from '../PayPalAccount';
+import ForgotPassword from '../ForgotPassword';
+import Toolbar from '../elements/Toolbar';
 
 const AccountScreens = createStackNavigator();
 export default function AccountStack(){
@@ -15,6 +17,9 @@ export default function AccountStack(){
         <AccountScreens.Navigator screenOptions={{
                 headerTintColor: 'white',
                 headerStyle: { backgroundColor: '#002171' },
+                headerRight: () => (
+                        <Toolbar/>
+                      )
               }}>
             <AccountScreens.Screen name = "Account" component = {Account} options = {{ 
                     headerShown: true,
@@ -61,6 +66,12 @@ export default function AccountStack(){
             <AccountScreens.Screen name = "Terms" component = {Terms} options = {{ 
                     headerShown: true,
                     title: "Terms",
+                    ...TransitionPresets.RevealFromBottomAndroid
+                 }}
+            />
+            <AccountScreens.Screen name = "ForgotPassword" component = {ForgotPassword} options = {{ 
+                    headerShown: true,
+                    title: "Recover password",
                     ...TransitionPresets.RevealFromBottomAndroid
                  }}
             />

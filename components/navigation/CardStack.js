@@ -3,6 +3,7 @@ import { createStackNavigator, TransitionPresets } from '@react-navigation/stack
 import Card from '../Card';
 import Checkout from '../Checkout';
 import Thanks from '../Thanks';
+import Toolbar from '../elements/Toolbar';
 
 const CardScreens = createStackNavigator();
 export default function CardStack(){
@@ -10,6 +11,9 @@ export default function CardStack(){
         <CardScreens.Navigator screenOptions={{
             headerTintColor: 'white',
             headerStyle: { backgroundColor: '#002171' },
+            headerRight: () => (
+                    <Toolbar/>
+                  )
           }}>
             <CardScreens.Screen name = "Card" component = {Card} options = {{ 
                     headerShown: true,

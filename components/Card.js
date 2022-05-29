@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 //IMPORTANDO NATIVEBASE
 import { Button, Box, Heading, Text, Center,  NativeBaseProvider, Divider, Stack } from 'native-base';
-import { TouchableOpacity } from "react-native";
+import { TouchableOpacity, ScrollView } from "react-native";
 import GlobalStyle from '../resources/GlobalStyle';
 import firebase from '../database/firebase';
-
+import { auth } from '../database/firebase';
 
 function Card ({ navigation }) {
 
@@ -19,11 +19,12 @@ function Card ({ navigation }) {
       const cart = [];
       finalPrice = 0;
       querySnapshot.docs.forEach((doc) => {
+        
         const { name, price } = doc.data();
         const id = doc.id;
         cart.push({ id: id, name: name, price: price });
         finalPrice = finalPrice + price;
-        // console.log(finalPrice);
+        
       });
       // console.log(cart)
       setProducts(cart);
@@ -42,6 +43,7 @@ function Card ({ navigation }) {
 
       return (
         <NativeBaseProvider >
+          <ScrollView>
           <Box safeArea p="2" py="8" w="90%" maxW="390">
             <Text style={GlobalStyle.largeLabelText}>
               CART
@@ -68,6 +70,7 @@ function Card ({ navigation }) {
               </TouchableOpacity>
             </Center>
           </Box>
+          </ScrollView>
         </NativeBaseProvider>
       );
     }
