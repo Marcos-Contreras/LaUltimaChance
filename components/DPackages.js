@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import {View, SafeAreaView, Image, Text, StyleSheet, Button, ScrollView, TouchableOpacity} from 'react-native';
 import GlobalStyle from '../resources/GlobalStyle';
 import firebase from '../database/firebase';
-import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
+import { auth } from '../database/firebase';
 
 const DPackages = ({navigation, route}) => {
 
@@ -11,13 +11,13 @@ const DPackages = ({navigation, route}) => {
   //AÑADIR EL PRODUCTO AL CARRITO
   const addToCart = async (name, price) => {
       try {
-        await firebase.db.collection("cart").add({
+        await firebase.db.collection("users").doc(auth.currentUser?.email).collection("cart").add({
           name: name,
           price: price,
         })
-        navigation.navigate('Card');
+        navigation.navigate('Cart');
       } catch (error) {
-        console.log(eror);
+        console.log(error);
       }
   }
 

@@ -1,6 +1,8 @@
 import * as React from 'react';
+import { TouchableOpacity } from 'react-native';
 //IMPORTANDO NATIVEBASE
-import { NativeBaseProvider, Button, Box, Link, FormControl, Heading, VStack, Input, Center, Image } from 'native-base';
+import { NativeBaseProvider, Text, Button, Box, Link, FormControl, Heading, VStack, Input, Center, Image } from 'native-base';
+import GlobalStyle from '../resources/GlobalStyle';
 
 function PayPalLogin ({ navigation }) {
     return (
@@ -10,24 +12,22 @@ function PayPalLogin ({ navigation }) {
             <Image source={{
                 uri: "https://1000marcas.net/wp-content/uploads/2019/12/logo-Paypal-500x281.png"
                 }} alt="Alternate Text" size="2xl" resizeMode={"contain"}/>
-            <Heading mt="1" _dark={{
-            color: "black"
-            }} fontWeight="medium" size="xs">
+            <Heading style={GlobalStyle.largeLabelText}>
                 Log in with PayPal
             </Heading>
     
             <VStack space={3} mt="2">
                 <FormControl>
                 <FormControl.Label>EMAIL</FormControl.Label>
-                <Input />
+                <Input size="xl"/>
                 </FormControl>
                 <FormControl>
                 <FormControl.Label>PASSWORD</FormControl.Label>
-                <Input type="password" />
+                <Input type="password" size="xl"/>
                 </FormControl>
-                <Button mt="2" colorScheme="blue" onPress={() => navigation.navigate('PayPalAccount')}>
-                LOG IN
-                </Button>
+                <TouchableOpacity style={GlobalStyle.largeButton} onPress={() => navigation.navigate('PayPalAccount')}>
+                    <Text style={GlobalStyle.largeButtonText}>LOG IN</Text>
+                </TouchableOpacity>
             </VStack>
             </Box>
         </Center>

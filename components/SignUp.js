@@ -3,6 +3,7 @@ import { Box, VStack, FormControl, Text, Input, Center, NativeBaseProvider, Imag
 import GlobalStyle from '../resources/GlobalStyle';
 import { TouchableOpacity } from 'react-native';
 import { auth } from "../database/firebase";
+import firebase from '../database/firebase';
 
 const SignUp = ({navigation}) => {
 
@@ -24,6 +25,9 @@ const SignUp = ({navigation}) => {
         .then(userCredentials => {
         const user = userCredentials.user;
         console.log('Registered with: ', user.email);
+        firebase.db.collection("users").doc(""+email+"").set({
+            email: email,
+          })
         })
         .catch(error => alert(error.message))
     } 
@@ -51,10 +55,10 @@ const SignUp = ({navigation}) => {
                             <FormControl.Label>PASSWORD</FormControl.Label>
                             <Input value = {password} onChangeText = {text=> setPassword(text)} type="password"/>
                         </FormControl>
-                        <FormControl>
+                        {/* <FormControl>
                             <FormControl.Label>CONFIRM PASSWORD</FormControl.Label>
                                 <Input type="password" size="xl"/>
-                            </FormControl>
+                            </FormControl> */}
                         {/* <TouchableOpacity onPress={() => navigation.navigate('RootClientTabs')} style={GlobalStyle.largeButton}> */}
                         <TouchableOpacity onPress={handleSignUp} style={GlobalStyle.largeButton}>
                             <Text style={GlobalStyle.largeButtonText}>REGISTER</Text>

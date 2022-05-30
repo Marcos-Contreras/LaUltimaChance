@@ -15,7 +15,7 @@ function Card ({ navigation }) {
   //MOSTRAR PRODUCTOS EN EL CARRITO
   useEffect(() => {
     let abortController = new AbortController();
-    firebase.db.collection("cart").onSnapshot((querySnapshot) => {
+    firebase.db.collection("users").doc(auth.currentUser?.email).collection("cart").onSnapshot((querySnapshot) => {
       const cart = [];
       finalPrice = 0;
       querySnapshot.docs.forEach((doc) => {
@@ -37,7 +37,7 @@ function Card ({ navigation }) {
 
   //BORRAR PRODUCTOS DEL CARRITO
   const deleteCart = async (idProd) => {
-    const dbRef = firebase.db.collection('cart').doc(idProd);
+    const dbRef = firebase.db.collection('users').doc(auth.currentUser?.email).collection("cart").doc(idProd);
     await dbRef.delete();
   }
 

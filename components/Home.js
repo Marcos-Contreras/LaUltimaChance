@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { StyleSheet, Text, TouchableOpacity, View, Box} from "react-native";
 import GlobalStyle from '../resources/GlobalStyle';
 import { auth } from '../database/firebase';
+import firebase from '../database/firebase';
 
 function Home ({ navigation }) {
 
