@@ -65,7 +65,7 @@ function Card ({ navigation }) {
 
             <Center>
             <Heading paddingTop={"8"}>Total: ${fp}</Heading>
-              <TouchableOpacity activeOpacity={0.2} onPress={() => navigation.navigate('Checkout')} style={GlobalStyle.largeButton}>
+              <TouchableOpacity activeOpacity={0.2} onPress={() => navigation.navigate('Checkout', fp)} style={GlobalStyle.largeButton}>
                 <Text style={GlobalStyle.largeButtonText}> BUY NOW </Text>
               </TouchableOpacity>
             </Center>

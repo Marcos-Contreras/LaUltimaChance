@@ -6,8 +6,6 @@ import { auth } from '../database/firebase';
 
 const DPackages = ({navigation, route}) => {
 
-  const [product, setProduct] = useState();
-
   //AÑADIR EL PRODUCTO AL CARRITO
   const addToCart = async (name, price) => {
       try {

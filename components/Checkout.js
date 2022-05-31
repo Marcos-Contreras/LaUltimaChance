@@ -1,15 +1,57 @@
-import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React, { useState, useEffect } from "react";
 //IMPORTANDO NATIVEBASE
 import { ScrollView, NativeBaseProvider, Text, Button, Box, Heading,  Radio, HStack, CheckIcon, Input, Divider, Image, Select, Checkbox, Link } from 'native-base';
+import { auth } from "../database/firebase";
+import firebase from '../database/firebase';
 
-function Checkout ({ navigation }) {
-  const [value, setValue] = React.useState("one");
-  const [value2, setValue2] = React.useState("one2");
-  let [service, setService] = React.useState("");
-  let [service1, setService1] = React.useState("");
-  let [service2, setService2] = React.useState("");
+
+function Checkout ({ navigation, route }) {
+
+  //PARA ALMACENAR ID'S DE PRODUCTOS QUE SE VAN A BORRAR
+  const products = [];
+
+ //CREAR VENTA
+  const addSale = async () => {
+    try {
+      await firebase.db.collection("users").doc(auth.currentUser?.email).collection("sales").add({
+        email: auth.currentUser?.email,
+        price: price,
+      })
+      //BORRAR PRODUCTOS DEL CARRITO
+      deleteCart();
+      navigation.replace('Thanks');
+    } catch (error) {
+      console.log(error);
+    }
+}
+
+//TOMAR TODOS LOS PRODUCTOS DEL CARRITO PARA LUEGO BORRARLOS
+useEffect(() => {
+  let abortController = new AbortController();
+  firebase.db.collection("users").doc(auth.currentUser?.email).collection("cart").onSnapshot((querySnapshot) => {
+    querySnapshot.docs.forEach((doc) => {
+      console.log('XDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD');
+      const id = doc.id;
+      products.push({ id: id });
+    });
+    console.log(products.length);
+  });
+  abortController.abort();
+}, []);
+
+const deleteCart = async () => {
+  for (let i = 0; i < products.length-1; i++) {
+    const prodlength = products.length();
+    console.log(prodlength);
+    const dbRef = firebase.db.collection('users').doc(auth.currentUser?.email).collection('cart').doc(products[i]);
+    await dbRef.delete();
+  }
+}
+
+
+  //SE RECIBE PRECIO PROVENIENTE DEL CARRITO
+  const price = route.params;
+
     return (
       <NativeBaseProvider>
         <ScrollView>
@@ -122,8 +164,8 @@ function Checkout ({ navigation }) {
 
     <Heading>Summary</Heading>
     <Divider  bg={"#000"} width={"50%"}>  </Divider>
-    <Heading my="1">Total to pay: 78$</Heading>
-    <Button width={"50%"} height={"6%"} my="2" bg={"#002171"} onPress={() => navigation.navigate("Thanks")}>BUY NOW</Button>
+    <Heading my="1">Total to pay: ${price}</Heading>
+    <Button width={"50%"} height={"6%"} my="2" bg={"#002171"} onPress={() => addSale()}>BUY NOW</Button>
 
     
         </Box>

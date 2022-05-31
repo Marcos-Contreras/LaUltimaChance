@@ -1,8 +1,24 @@
 import React from 'react';
 import {View, SafeAreaView, Image, Text, StyleSheet, Button, ScrollView, TouchableOpacity} from 'react-native';
 import GlobalStyle from '../resources/GlobalStyle';
+import firebase from '../database/firebase';
+import { auth } from '../database/firebase';
 
 const DNovelty = ({navigation, route}) => {
+
+    //AÑADIR EL PRODUCTO AL CARRITO
+    const addToCart = async (name, price) => {
+      try {
+        await firebase.db.collection("users").doc(auth.currentUser?.email).collection("cart").add({
+          name: name,
+          price: price,
+        })
+        navigation.navigate('Cart');
+      } catch (error) {
+        console.log(error);
+      }
+  }
+
   const productos = route.params;
 
   return (
@@ -73,7 +89,7 @@ const DNovelty = ({navigation, route}) => {
             }}>
 
             <View>
-            <TouchableOpacity onPress={() => navigation.navigate('Cart')} style={GlobalStyle.largeButton}>
+            <TouchableOpacity onPress={() => addToCart(productos.name, productos.price)} style={GlobalStyle.largeButton}>
                 <Text style={GlobalStyle.largeButtonText}>ADD TO CART</Text>
               </TouchableOpacity>
             </View>

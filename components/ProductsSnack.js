@@ -2,7 +2,7 @@ const plants = [
     {
       id: 1,
       name: 'Cacahuates Botanukas Japoneses Limón',
-      price: '7.50',
+      price: 7.50,
       like: true,
       img: require('../assets/Botanukas.png'),
       date: '20-05-2022',
@@ -13,7 +13,7 @@ const plants = [
     {
       id: 2,
       name: 'Chicharrón de cerdo Las Norias',
-      price: '21.00',
+      price: 21.00,
       like: false,
       img: require('../assets/Chicarron.png'),
       date: '20-05-2022',
@@ -23,7 +23,7 @@ const plants = [
     {
       id: 3,
       name: 'Mega Mix Botanas campesinas',
-      price: '24.50',
+      price: 24.50,
       like: false,
       img: require('../assets/Megamix.png'),
       date: '20-05-2022',
@@ -34,7 +34,7 @@ const plants = [
     {
       id: 4,
       name: 'Palomitas para microondas  ACT II sabor Mantequilla',
-      price: '9.50',
+      price: 9.50,
       like: true,
       img: require('../assets/Palomitas.png'),
       date: '20-05-2022',
@@ -44,7 +44,7 @@ const plants = [
     {
       id: 5,
       name: 'Papas Fritas Botanas Las Norias Tradicionales  ',
-      price: '23.00',
+      price: 23.00,
       like: true,
       img: require('../assets/PapasFritas.png'),
       date: '20-05-2022',
@@ -54,7 +54,7 @@ const plants = [
     {
       id: 6,
       name: 'Surtido botanero Botanas Las Norias',
-      price: '17.50',
+      price: 17.5,
       like: false,
       img: require('../assets/Botanas.png'),
       date: '20-05-2022',

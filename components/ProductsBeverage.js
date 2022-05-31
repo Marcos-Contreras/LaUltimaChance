@@ -2,7 +2,7 @@ const plants = [
     {
       id: 1,
       name: 'Naranjada Los 19 Hermanos',
-      price: '7.00',
+      price: 7.00,
       like: true,
       img: require('../assets/Jugo.png'),
       date: '20-05-2022',
@@ -13,7 +13,7 @@ const plants = [
     {
       id: 2,
       name: 'Refresco Crush Limón ',
-      price: '12.50',
+      price: 12.50,
       like: false,
       img: require('../assets/Crush.png'),
       date: '20-05-2022',
@@ -23,7 +23,7 @@ const plants = [
     {
       id: 3,
       name: 'Refresco Joya sabor manzana',
-      price: '21.00',
+      price: 21.00,
       like: false,
       img: require('../assets/Joya.png'),
       date: '20-05-2022',
@@ -34,7 +34,7 @@ const plants = [
     {
       id: 4,
       name: 'La Charrita sabor fresa',
-      price: '10.50',
+      price: 10.50,
       like: true,
       img: require('../assets/Charrrita.png'),
       date: '20-05-2022',
@@ -44,7 +44,7 @@ const plants = [
     {
       id: 5,
       name: 'Bebida Boing Tradicional de Pulpa de Manzana ',
-      price: '10.50',
+      price: 10.50,
       like: true,
       img: require('../assets/Boing.png'),
       date: '20-05-2022',
@@ -54,7 +54,7 @@ const plants = [
     {
       id: 6,
       name: 'Refresco Barrilitos sabor piña',
-      price: '10.50',
+      price: 10.50,
       like: false,
       img: require('../assets/Barrilito.png'),
       date: '20-05-2022',

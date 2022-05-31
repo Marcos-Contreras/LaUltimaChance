@@ -2,7 +2,7 @@ const DescNovelty = [
     {
       id: 1,
       name: 'Refresco Barrilitos sabor piña',
-      price: '10.50',
+      price: 10.50,
       img: require('../assets/Barrilito.png'),
       date:'30-05-2022',
       about:
@@ -12,7 +12,7 @@ const DescNovelty = [
     {
       id: 2,
       name: 'Surtido Botanero de las Norias',
-      price: '17.50',
+      price: 17.50,
       img: require('../assets/Botanas.png'),
       date:'27-05-2022',
       about:
@@ -21,7 +21,7 @@ const DescNovelty = [
     {
       id: 3,
       name: 'Refresco Crush Limón',
-      price: '12.50',
+      price: 12.50,
       img: require('../assets/Crush.png'),
       date:'28-05-2022',
       about:
@@ -31,7 +31,7 @@ const DescNovelty = [
     {
       id: 4,
       name: 'Crema tarro Aguascalientes',
-      price: '12.50',
+      price: 12.50,
       img: require('../assets/Crema.png'),
       date:'26-05-2022',
       about:
@@ -40,7 +40,7 @@ const DescNovelty = [
     {
       id: 5,
       name: 'Botanukas',
-      price: '07.50',
+      price: 7.50,
       img: require('../assets/Botanukas.png'),
       date:'24-05-2022',
       about:
@@ -49,7 +49,7 @@ const DescNovelty = [
     {
       id: 6,
       name: 'Queso oaxaca Don Oaxaca',
-      price: '28.00',
+      price: 28.00,
       img: require('../assets/DonOaxaca.png'),
       date:'31-05-2022',
       about:

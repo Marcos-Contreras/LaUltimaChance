@@ -23,9 +23,9 @@ const Toolbar = () => {
                         <HamburgerIcon style={{ color: 'white', margin: 15 }}/>
                     </Pressable>;
             }}>
-                <Menu.Item onPress={() => navigation.navigate('Accounts')}>Mi cuenta</Menu.Item>
-                <Menu.Item onPress={() => navigation.navigate('AccountStack', { screen: 'Settings' })}>Configuración</Menu.Item>
-                <Menu.Item onPress={handleSignOut}>Cerrar sesión</Menu.Item>
+                <Menu.Item onPress={() => navigation.navigate('Accounts')}>My account</Menu.Item>
+                <Menu.Item onPress={() => navigation.navigate('AccountStack', { screen: 'Settings' })}>Configuration</Menu.Item>
+                <Menu.Item onPress={handleSignOut}>Log out</Menu.Item>
             </Menu>
             </Box>
     </NativeBaseProvider>

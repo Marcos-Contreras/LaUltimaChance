@@ -2,7 +2,7 @@ const DescOffers = [
     {
       id: 1,
       name: 'Café Olé Cappuccino Espresso',
-      price: '18.00',
+      price: 18.00,
       img: require('../assets/cafeOle.png'),
       date:'20-05-2022',
       about:
@@ -12,7 +12,7 @@ const DescOffers = [
     {
       id: 2,
       name: 'Botana Crackis Fuego',
-      price: '14.50',
+      price: 14.50,
       img: require('../assets/crackisFuego.png'),
       date:'25-05-2022',
       about:
@@ -21,7 +21,7 @@ const DescOffers = [
     {
       id: 3,
       name: 'Yogurt Sello Rojo',
-      price: '07.50',
+      price: 7.50,
       img: require('../assets/yogurtSelloRojo.png'),
       date:'10-05-2022',
       about:
@@ -31,7 +31,7 @@ const DescOffers = [
     {
       id: 4,
       name: 'Palomitas Crackis sabor mantequilla',
-      price: '07.50',
+      price: 7.5,
       img: require('../assets/crackispalomitas.png'),
       date:'23-05-2022',
       about:
@@ -40,7 +40,7 @@ const DescOffers = [
     {
       id: 5,
       name: 'Papas Bokados Prispas',
-      price: '14.50',
+      price: '14.5',
       img: require('../assets/prispas.png'),
       date:'17-05-2022',
       about:
@@ -49,7 +49,7 @@ const DescOffers = [
     {
       id: 6,
       name: 'Leche 19 hermanos',
-      price: '10.50',
+      price: 10.5,
       img: require('../assets/leche19hermanos.png'),
       date:'12-05-2022',
       about:
